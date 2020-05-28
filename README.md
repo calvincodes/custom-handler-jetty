@@ -25,7 +25,7 @@
 * Verify your configuration. [Gist Link](https://gist.github.com/calvincodes/ad75043c35e8e548c8bdf8a015f91ca1)
 <details> 
   <summary>Expand to see logs</summary>
-  ```text
+  <code>
   ➜  war-packaging git:(master) ✗ java -jar ~/Desktop/jetty-home/start.jar --list-config
   
   Java Environment:
@@ -127,7 +127,7 @@
    ${jetty.home}/etc/jetty-jmx.xml
    ${jetty.home}/etc/jetty-rewrite.xml
    ${jetty.base}/etc/my-war-packaged-handler.xml
-  ```
+  </code>
 </details>
 
 * Start jetty from jetty-base (`war-packaging` module) [Gist Link](https://gist.github.com/calvincodes/2aa7fda9994eab96b7a29cdf066d82b2)
