@@ -25,7 +25,7 @@
 * Verify your configuration. [Gist Link](https://gist.github.com/calvincodes/ad75043c35e8e548c8bdf8a015f91ca1)
 <details> 
   <summary>Expand to see logs</summary>
-  ```
+  ```text
   ➜  war-packaging git:(master) ✗ java -jar ~/Desktop/jetty-home/start.jar --list-config
   
   Java Environment:
