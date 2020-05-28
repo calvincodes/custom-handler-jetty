@@ -4,24 +4,4 @@
          version="3.1">
     <display-name>My Custom Handler Jetty App</display-name>
 
-<!--    &lt;!&ndash; Use only this error-page declaration for a "global" error page handling-->
-<!--    <error-page>-->
-<!--      <location>/error</location>-->
-<!--    </error-page>-->
-<!--      &ndash;&gt;-->
-
-<!--    <error-page>-->
-<!--        <exception-type>java.lang.Throwable</exception-type>-->
-<!--        <location>/error</location>-->
-<!--    </error-page>-->
-
-<!--    <error-page>-->
-<!--        <error-code>404</error-code>-->
-<!--        <location>/error</location>-->
-<!--    </error-page>-->
-
-<!--    <error-page>-->
-<!--        <error-code>503</error-code>-->
-<!--        <location>/error</location>-->
-<!--    </error-page>-->
 </web-app>

@@ -15,6 +15,6 @@ public class HelloServlet extends HttpServlet {
     {
         resp.setContentType("text/plain");
         resp.getWriter().println("Hello Client: " + req.getRemoteAddr());
-        resp.getWriter().println("Please go back and try a different URL");
+        resp.getWriter().println("Welcome to the HelloServlet!");
     }
 }
