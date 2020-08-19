@@ -331,3 +331,4 @@ Caused by: java.lang.NoSuchMethodException: insertHandler
 
 ## References
 * [jetty-project/servlet-error-page-handling](https://github.com/jetty-project/servlet-error-page-handling) 
+* [Stack Overflow Discussion](https://stackoverflow.com/questions/62053941/adding-custom-handler-to-jetty-throws-classnotfoundexception)
