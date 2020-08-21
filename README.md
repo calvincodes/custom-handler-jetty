@@ -19,7 +19,7 @@
 
 ## Running with handler written in war-packaged module
 * Verify only `etc/my-war-packaged-handler.xml` is uncommented in `start.d/my-handler.ini`
-* Verify `start.ini` contains `--lib=target/classes/com/`. This adds 
+* Verify `start.ini` contains `--lib=target/classes/`. This adds 
 `CustomHandlerWarPackaged` class to the server classpath.
  
 * Verify your configuration.
