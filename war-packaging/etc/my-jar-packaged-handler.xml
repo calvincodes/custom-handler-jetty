@@ -2,7 +2,7 @@
 <!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure_9_3.dtd">
 
 <Configure id="Server" class="org.eclipse.jetty.server.Server">
-    <Call name="insertHandler">
+    <Call name="setHandler">
         <Arg>
             <New id="CustomJettyHandler" class="com.github.calvincodes.CustomHandlerJarPackaged" />
         </Arg>

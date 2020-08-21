@@ -19,10 +19,10 @@
 
 ## Running with handler written in war-packaged module
 * Verify only `etc/my-war-packaged-handler.xml` is uncommented in `start.d/my-handler.ini`
-* Verify `start.ini` contains `--lib=target/classes/com/github/calvincodes`. This adds 
+* Verify `start.ini` contains `--lib=target/classes/com/`. This adds 
 `CustomHandlerWarPackaged` class to the server classpath.
  
-* Verify your configuration. [Gist Link](https://gist.github.com/calvincodes/ad75043c35e8e548c8bdf8a015f91ca1)
+* Verify your configuration.
 ```text
 ➜  war-packaging git:(master) ✗ java -jar ~/Desktop/jetty-home/start.jar --list-config
 
@@ -42,7 +42,7 @@ Java Environment:
 
 Jetty Environment:
 -----------------
- jetty.version = 9.4.29.v20200521
+ jetty.version = 9.4.31.v20200723
  jetty.tag.version = master
  jetty.home = /Users/arpit/Desktop/jetty-home
  jetty.base = /Users/arpit/Desktop/personal_projects/custom-handler-jetty/war-packaging
@@ -83,7 +83,7 @@ Jetty Server Classpath:
 Version Information on 28 entries in the classpath.
 Note: order presented here is how they would appear on the classpath.
       changes to the --module=name command line options will be reflected here.
- 0:                    (dir) | ${jetty.base}/target/classes/com/github/calvincodes
+ 0:                    (dir) | ${jetty.base}/target/classes
  1:      1.4.1.v201005082020 | ${jetty.home}/lib/mail/javax.mail.glassfish-1.4.1.v201005082020.jar
  2:             1.0-SNAPSHOT | ${jetty.base}/lib/ext/jar-packaging-1.0-SNAPSHOT.jar
  3:                   1.7.30 | ${jetty.base}/lib/slf4j/slf4j-api-1.7.30.jar
@@ -91,26 +91,26 @@ Note: order presented here is how they would appear on the classpath.
  5:                    (dir) | ${jetty.base}/resources
  6:                    3.1.0 | ${jetty.home}/lib/servlet-api-3.1.jar
  7:                 3.1.0.M0 | ${jetty.home}/lib/jetty-schemas-3.1.jar
- 8:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-http-9.4.29.v20200521.jar
- 9:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-server-9.4.29.v20200521.jar
-10:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-xml-9.4.29.v20200521.jar
-11:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-util-9.4.29.v20200521.jar
-12:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-io-9.4.29.v20200521.jar
-13:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-jndi-9.4.29.v20200521.jar
-14:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-security-9.4.29.v20200521.jar
+ 8:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-http-9.4.31.v20200723.jar
+ 9:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-server-9.4.31.v20200723.jar
+10:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-xml-9.4.31.v20200723.jar
+11:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-util-9.4.31.v20200723.jar
+12:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-io-9.4.31.v20200723.jar
+13:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-jndi-9.4.31.v20200723.jar
+14:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-security-9.4.31.v20200723.jar
 15:                      1.3 | ${jetty.home}/lib/transactions/javax.transaction-api-1.3.jar
-16:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-servlet-9.4.29.v20200521.jar
-17:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-webapp-9.4.29.v20200521.jar
-18:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-plus-9.4.29.v20200521.jar
-19:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-annotations-9.4.29.v20200521.jar
+16:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-servlet-9.4.31.v20200723.jar
+17:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-webapp-9.4.31.v20200723.jar
+18:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-plus-9.4.31.v20200723.jar
+19:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-annotations-9.4.31.v20200723.jar
 20:                    7.3.1 | ${jetty.home}/lib/annotations/asm-7.3.1.jar
 21:                    7.3.1 | ${jetty.home}/lib/annotations/asm-analysis-7.3.1.jar
 22:                    7.3.1 | ${jetty.home}/lib/annotations/asm-commons-7.3.1.jar
 23:                    7.3.1 | ${jetty.home}/lib/annotations/asm-tree-7.3.1.jar
 24:                      1.3 | ${jetty.home}/lib/annotations/javax.annotation-api-1.3.jar
-25:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-deploy-9.4.29.v20200521.jar
-26:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-jmx-9.4.29.v20200521.jar
-27:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-rewrite-9.4.29.v20200521.jar
+25:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-deploy-9.4.31.v20200723.jar
+26:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-jmx-9.4.31.v20200723.jar
+27:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-rewrite-9.4.31.v20200723.jar
 
 Jetty Active XMLs:
 ------------------
@@ -127,57 +127,15 @@ Jetty Active XMLs:
  ${jetty.base}/etc/my-war-packaged-handler.xml
 ```
 
-* Start jetty from jetty-base (`war-packaging` module) [Gist Link](https://gist.github.com/calvincodes/2aa7fda9994eab96b7a29cdf066d82b2)
+* Start jetty from jetty-base (`war-packaging` module) and access `http://localhost:8080/demo/`
 ```text
 ➜  war-packaging git:(master) ✗ java -jar ~/Desktop/jetty-home/start.jar
-05/28/20 11:05:21 [INFO] Logging initialized @167ms to org.eclipse.jetty.util.log.Slf4jLog
-05/28/20 11:05:22 [WARNING] Config error at <Call name="insertHandler"><Arg>
-            <New id="CustomJettyHandler" class="com.github.calvincodes.CustomHandlerWarPackaged"/>
-        </Arg></Call>
-05/28/20 11:05:22 [WARNING]
-java.security.PrivilegedActionException: java.lang.ClassNotFoundException: com.github.calvincodes.CustomHandlerWarPackaged
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.jetty.xml.XmlConfiguration.main(XmlConfiguration.java:1878)
-Caused by: java.lang.ClassNotFoundException: com.github.calvincodes.CustomHandlerWarPackaged
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
-	at org.eclipse.jetty.util.Loader.loadClass(Loader.java:64)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.newObj(XmlConfiguration.java:1027)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.itemValue(XmlConfiguration.java:1561)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.value(XmlConfiguration.java:1462)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.access$600(XmlConfiguration.java:416)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration$Args.<init>(XmlConfiguration.java:1720)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration$Args.<init>(XmlConfiguration.java:1707)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.call(XmlConfiguration.java:963)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure(XmlConfiguration.java:536)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure(XmlConfiguration.java:489)
-	at org.eclipse.jetty.xml.XmlConfiguration.configure(XmlConfiguration.java:401)
-	at org.eclipse.jetty.xml.XmlConfiguration.lambda$main$1(XmlConfiguration.java:1915)
-	... 2 more
-
-Exception in thread "main" java.security.PrivilegedActionException: java.lang.ClassNotFoundException: com.github.calvincodes.CustomHandlerWarPackaged
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.jetty.xml.XmlConfiguration.main(XmlConfiguration.java:1878)
-Caused by: java.lang.ClassNotFoundException: com.github.calvincodes.CustomHandlerWarPackaged
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
-	at org.eclipse.jetty.util.Loader.loadClass(Loader.java:64)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.newObj(XmlConfiguration.java:1027)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.itemValue(XmlConfiguration.java:1561)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.value(XmlConfiguration.java:1462)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.access$600(XmlConfiguration.java:416)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration$Args.<init>(XmlConfiguration.java:1720)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration$Args.<init>(XmlConfiguration.java:1707)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.call(XmlConfiguration.java:963)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure(XmlConfiguration.java:536)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure(XmlConfiguration.java:489)
-	at org.eclipse.jetty.xml.XmlConfiguration.configure(XmlConfiguration.java:401)
-	at org.eclipse.jetty.xml.XmlConfiguration.lambda$main$1(XmlConfiguration.java:1915)
-	... 2 more
+08/21/20 01:50:03 [INFO] Logging initialized @173ms to org.eclipse.jetty.util.log.Slf4jLog
+08/21/20 01:50:04 [INFO] jetty-9.4.31.v20200723; built: 2020-07-23T17:57:36.812Z; git: 450ba27947e13e66baa8cd1ce7e85a4461cacc1d; jvm 1.8.0_181-b13
+08/21/20 01:50:04 [INFO] Deployment monitor [file:///Users/arpit/Desktop/personal_projects/custom-handler-jetty/war-packaging/webapps/] at interval 1
+08/21/20 01:50:04 [INFO] Started ServerConnector@20322d26{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+08/21/20 01:50:04 [INFO] Started @1003ms
+This is a custom WAR packaged handler
 ```
 
 ## Running with handler written in jar-packaged module
@@ -205,7 +163,7 @@ Java Environment:
 
 Jetty Environment:
 -----------------
- jetty.version = 9.4.29.v20200521
+ jetty.version = 9.4.31.v20200723
  jetty.tag.version = master
  jetty.home = /Users/arpit/Desktop/jetty-home
  jetty.base = /Users/arpit/Desktop/personal_projects/custom-handler-jetty/war-packaging
@@ -246,7 +204,7 @@ Jetty Server Classpath:
 Version Information on 28 entries in the classpath.
 Note: order presented here is how they would appear on the classpath.
       changes to the --module=name command line options will be reflected here.
- 0:                    (dir) | ${jetty.base}/target/classes/com/github/calvincodes
+ 0:                    (dir) | ${jetty.base}/target/classes
  1:      1.4.1.v201005082020 | ${jetty.home}/lib/mail/javax.mail.glassfish-1.4.1.v201005082020.jar
  2:             1.0-SNAPSHOT | ${jetty.base}/lib/ext/jar-packaging-1.0-SNAPSHOT.jar
  3:                   1.7.30 | ${jetty.base}/lib/slf4j/slf4j-api-1.7.30.jar
@@ -254,26 +212,26 @@ Note: order presented here is how they would appear on the classpath.
  5:                    (dir) | ${jetty.base}/resources
  6:                    3.1.0 | ${jetty.home}/lib/servlet-api-3.1.jar
  7:                 3.1.0.M0 | ${jetty.home}/lib/jetty-schemas-3.1.jar
- 8:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-http-9.4.29.v20200521.jar
- 9:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-server-9.4.29.v20200521.jar
-10:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-xml-9.4.29.v20200521.jar
-11:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-util-9.4.29.v20200521.jar
-12:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-io-9.4.29.v20200521.jar
-13:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-jndi-9.4.29.v20200521.jar
-14:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-security-9.4.29.v20200521.jar
+ 8:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-http-9.4.31.v20200723.jar
+ 9:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-server-9.4.31.v20200723.jar
+10:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-xml-9.4.31.v20200723.jar
+11:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-util-9.4.31.v20200723.jar
+12:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-io-9.4.31.v20200723.jar
+13:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-jndi-9.4.31.v20200723.jar
+14:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-security-9.4.31.v20200723.jar
 15:                      1.3 | ${jetty.home}/lib/transactions/javax.transaction-api-1.3.jar
-16:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-servlet-9.4.29.v20200521.jar
-17:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-webapp-9.4.29.v20200521.jar
-18:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-plus-9.4.29.v20200521.jar
-19:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-annotations-9.4.29.v20200521.jar
+16:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-servlet-9.4.31.v20200723.jar
+17:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-webapp-9.4.31.v20200723.jar
+18:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-plus-9.4.31.v20200723.jar
+19:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-annotations-9.4.31.v20200723.jar
 20:                    7.3.1 | ${jetty.home}/lib/annotations/asm-7.3.1.jar
 21:                    7.3.1 | ${jetty.home}/lib/annotations/asm-analysis-7.3.1.jar
 22:                    7.3.1 | ${jetty.home}/lib/annotations/asm-commons-7.3.1.jar
 23:                    7.3.1 | ${jetty.home}/lib/annotations/asm-tree-7.3.1.jar
 24:                      1.3 | ${jetty.home}/lib/annotations/javax.annotation-api-1.3.jar
-25:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-deploy-9.4.29.v20200521.jar
-26:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-jmx-9.4.29.v20200521.jar
-27:         9.4.29.v20200521 | ${jetty.home}/lib/jetty-rewrite-9.4.29.v20200521.jar
+25:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-deploy-9.4.31.v20200723.jar
+26:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-jmx-9.4.31.v20200723.jar
+27:         9.4.31.v20200723 | ${jetty.home}/lib/jetty-rewrite-9.4.31.v20200723.jar
 
 Jetty Active XMLs:
 ------------------
@@ -290,43 +248,15 @@ Jetty Active XMLs:
  ${jetty.base}/etc/my-jar-packaged-handler.xml
 ```
 
-* Start jetty from jetty-base (war-packaging module) [Gist Link](https://gist.github.com/calvincodes/0fc7fc24717846f3c7ab27e210b6ab61)
+* Start jetty from jetty-base (war-packaging module) and access `http://localhost:8080/demo/`
 ```text
 ➜  war-packaging git:(master) ✗ java -jar ~/Desktop/jetty-home/start.jar
-05/28/20 11:26:18 [INFO] Logging initialized @163ms to org.eclipse.jetty.util.log.Slf4jLog
-05/28/20 11:26:19 [WARNING] Config error at <Call name="insertHandler"><Arg>
-            <New id="CustomJettyHandler" class="com.github.calvincodes.CustomHandlerJarPackaged"/>
-        </Arg></Call>
-05/28/20 11:26:19 [WARNING]
-java.lang.IllegalStateException: No Method: <Call name="insertHandler"><Arg>
-            <New id="CustomJettyHandler" class="com.github.calvincodes.CustomHandlerJarPackaged"/>
-        </Arg></Call> on class org.eclipse.jetty.server.Server
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.call(XmlConfiguration.java:971)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure(XmlConfiguration.java:536)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure(XmlConfiguration.java:489)
-	at org.eclipse.jetty.xml.XmlConfiguration.configure(XmlConfiguration.java:401)
-	at org.eclipse.jetty.xml.XmlConfiguration.lambda$main$1(XmlConfiguration.java:1915)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.jetty.xml.XmlConfiguration.main(XmlConfiguration.java:1878)
-Caused by: java.lang.NoSuchMethodException: insertHandler
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.call(XmlConfiguration.java:1008)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.call(XmlConfiguration.java:963)
-	... 6 more
-
-Exception in thread "main" java.lang.IllegalStateException: No Method: <Call name="insertHandler"><Arg>
-            <New id="CustomJettyHandler" class="com.github.calvincodes.CustomHandlerJarPackaged"/>
-        </Arg></Call> on class org.eclipse.jetty.server.Server
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.call(XmlConfiguration.java:971)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure(XmlConfiguration.java:536)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.configure(XmlConfiguration.java:489)
-	at org.eclipse.jetty.xml.XmlConfiguration.configure(XmlConfiguration.java:401)
-	at org.eclipse.jetty.xml.XmlConfiguration.lambda$main$1(XmlConfiguration.java:1915)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.jetty.xml.XmlConfiguration.main(XmlConfiguration.java:1878)
-Caused by: java.lang.NoSuchMethodException: insertHandler
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.call(XmlConfiguration.java:1008)
-	at org.eclipse.jetty.xml.XmlConfiguration$JettyXmlConfiguration.call(XmlConfiguration.java:963)
-	... 6 more
+08/21/20 01:54:54 [INFO] Logging initialized @144ms to org.eclipse.jetty.util.log.Slf4jLog
+08/21/20 01:54:55 [INFO] jetty-9.4.31.v20200723; built: 2020-07-23T17:57:36.812Z; git: 450ba27947e13e66baa8cd1ce7e85a4461cacc1d; jvm 1.8.0_181-b13
+08/21/20 01:54:55 [INFO] Deployment monitor [file:///Users/arpit/Desktop/personal_projects/custom-handler-jetty/war-packaging/webapps/] at interval 1
+08/21/20 01:54:55 [INFO] Started ServerConnector@20322d26{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+08/21/20 01:54:55 [INFO] Started @817ms
+This is a custom JAR packaged handler
 ```
 
 ## References
