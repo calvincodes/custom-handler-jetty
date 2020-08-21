@@ -143,7 +143,7 @@ This is a custom WAR packaged handler
 * Verify only `etc/my-jar-packaged-handler.xml` is uncommented in `start.d/my-handler.ini`
 * Verify `lib/ext` contains `jar-packaging-1.0-SNAPSHOT.jar`.
 
-* Verify your configuration [Gist Link](https://gist.github.com/calvincodes/26a9af0e8cb424c042df5d14f73ff246)
+* Verify your configuration.
 ```text
 ➜  war-packaging git:(master) ✗ java -jar ~/Desktop/jetty-home/start.jar --list-config
 
